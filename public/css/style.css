@@ -1,0 +1,44 @@
+body{
+    background-color: cornflowerblue;
+}
+
+.game{
+    border: solid 4px darkblue;
+    width: 25%;
+    justify-content: center;
+    text-align: center;
+    padding: 2%;
+    margin-bottom: 3%;
+    background-color: darkcyan;
+    border-radius: 5%;
+   
+}
+
+.note{
+    color: darkred;
+}
+.titre{
+    font-size: 2em;
+}
+img{
+    width: 85%;
+    height: 60%;
+    margin-bottom: 3%;
+    
+}
+
+h1{
+    text-align: center;
+    margin :5%;
+    color: blue;
+}
+
+.allgame{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+p{
+    color: white;
+}

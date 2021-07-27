@@ -1,0 +1,25 @@
+<%- include ('partials/header') %>
+
+<h1> LISTE DES JEUX VIDEOS </h1>
+
+
+<div class="allgame">
+
+<% for (const jeu of jeuxvideo) { %>
+<div class="game">
+ <a href="/<%=jeu.id%>">
+  <img src="img/<%=jeu.image%>.jpg">
+  <p class="titre"><%= jeu.titre %></p></a>
+  <p>Disponible sur : <%=jeu.plateforme%></p>
+  <p class="description"><%= jeu.description%></p>
+  <p class="date">Date de sortie :  <%= jeu.date_de_sortie%> </p>
+  <p>Note moyenne des joueurs :<%=jeu.note%>/10</p>
+
+</div>
+
+<% }%>
+
+</div>
+
+
+<%- include ('partials/footer') %>

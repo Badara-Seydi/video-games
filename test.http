@@ -1,0 +1,11 @@
+POST http://localhost:8080/new
+Content-Type:application/json
+
+{
+    "titre": "article-de-test",
+    "image": 4,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    "date de sortie": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia enim maxime maiores sapiente! Magni, nemo eius. ",
+    "plateforme": "ps4",
+    "note" : 10
+}

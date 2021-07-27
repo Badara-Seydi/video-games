@@ -1,0 +1,353 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- saved from url=(0024)http://mocodo.wingi.net/ -->
+<html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script type="text/javascript" async="" src="./Mocodo online_files/ga.js"></script><script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-1925109-8']);
+		_gaq.push(['_trackPageview']);
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+</head><body><a href="https://github.com/laowantong/mocodo"><img style="position: absolute; top: 0; right: 0; border: 0; width: 149px; height: 149px;" src="./Mocodo online_files/fork-me-right-turquoise@2x.png" alt="Fork me on GitHub"></a>
+<title>Mocodo online</title>
+
+<link rel="stylesheet" href="./Mocodo online_files/reset.css">
+<link rel="stylesheet" href="./Mocodo online_files/style.css">
+<link rel="stylesheet" href="./Mocodo online_files/font-awesome.min.css">
+<link rel="stylesheet" href="./Mocodo online_files/css" type="text/css">
+
+<link rel="apple-touch-icon" sizes="180x180" href="http://mocodo.wingi.net/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="http://mocodo.wingi.net/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="http://mocodo.wingi.net/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="http://mocodo.wingi.net/manifest.json">
+<link rel="mask-icon" href="http://mocodo.wingi.net/safari-pinned-tab.svg" color="#0d42ff">
+<meta name="apple-mobile-web-app-title" content="Mocodo">
+<meta name="application-name" content="Mocodo">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+<div id="wrap">
+	<div id="banner">
+	    <img src="./Mocodo online_files/mocodonline.svg">
+	</div>​
+	<form method="post" id="mainForm" action="http://mocodo.wingi.net/web/download.php" autocomplete="off">
+		<input type="hidden" name="state" id="state" value="ready">
+		<input type="hidden" name="archiveName" id="archiveName" value="Jeux videos.zip">
+		<input type="hidden" name="path" id="path" value="sessions/84.101.181.29-65ff6a8ccede7391c205e31d6e878b40">
+		<input type="hidden" name="guess_title" id="guess_title" value="true">
+		<div id="inputZone">
+			<div class="line"></div>
+			<ul class="tabs">
+				<li><a href="http://mocodo.wingi.net/#aboutContents" class="first_tab"><span class="fa fa-info-circle"></span></a></li>
+				<li><a href="http://mocodo.wingi.net/#inputContents" class="active"><span>Entrée</span></a></li>
+				<li><a href="http://mocodo.wingi.net/#paramContents"><span>Options</span></a></li>
+				<li><a href="http://mocodo.wingi.net/#geoContents" id="geoTab" style="display: inline;"><span>Retouches</span></a></li>
+			</ul>
+			<div class="pane">
+				<div id="inputButtons" class="buttons">
+					<span class="fa fa-arrows-v fa-2x customButton" id="flipHorizontallyButton" onclick="arrange(event, &#39;flip=h&#39;)" title="Inverser les rangées."></span>
+					<span class="fa fa-arrows-h fa-2x customButton" id="flipVerticallyButton" onclick="arrange(event, &#39;flip=v&#39;)" title="Inverser les colonnes."></span>
+					<span class="fa fa-arrows-v fa-2x fa-rotate-45 customButton" id="flipDiagonallyButton" onclick="arrange(event, &#39;flip=d&#39;)" title="Transposer colonnes et rangées."></span>
+					<span class="fa fa-random fa-2x customButton" id="arrangeButton" onclick="arrange(event, &#39;arrange=bb&#39;)" title="Réarranger automatiquement les boîtes (sur la grille actuelle avec SHIFT, sans contraintes avec ALT)."></span>
+				</div>
+				<div id="aboutContents" class="contents" style="display: none;">
+<p>
+	Mocodo est un logiciel d'aide à l'enseignement et à la conception de <a href="https://fr.wikipedia.org/wiki/Base_de_donn%C3%A9es_relationnelle">bases de données relationnelles</a>.
+	En entrée, il prend une description textuelle des entités et associations du modèle conceptuel de données (<a href="https://fr.wikipedia.org/wiki/Mod%C3%A8le_entit%C3%A9-association">MCD</a>).
+	En sortie, il produit son diagramme entité-association en <a href="https://fr.wikipedia.org/wiki/Scalable_Vector_Graphics">SVG</a> et son schéma relationnel (<a href="https://fr.wikipedia.org/wiki/Merise_&amp;#%2040;informatique&amp;#%2041;#Le_MLD_mod.C3.A8le_logique_des_donn.C3.A9es">MLD</a>) en <a href="https://fr.wikipedia.org/wiki/Structured_Query_Language">SQL</a>, <a href="https://fr.wikipedia.org/wiki/LaTeX"><span style="font-family: serif; font-style: normal; margin-right: -.7em;">L<span style="font-size: 0.9em; position: relative; top: -.1em; left: -0.4em;">A</span><span style="position: relative; left: -.5em;">T</span><span style="position: relative; top: .2em; left: -.6em;">E</span><span style="position: relative; left: -.7em;">X</span></span></a>, <a href="https://fr.wikipedia.org/wiki/Markdown">Markdown</a>, etc.
+</p>
+<h1>Syntaxe du texte d'entrée</h1>
+
+<h2>Principe</h2>
+<ul>
+<li>Chaque ligne constitue la définition d'une entité ou d'une association («&nbsp;boîte&nbsp;» dans la suite).</li>
+</ul>
+
+<h2>Définir une entité</h2>
+
+<pre><code>nom entité: attribut 1, attribut 2, attribut 3, ...
+</code></pre>
+
+<ul>
+<li>Un nom d'entité est séparé de ses attributs par un deux-points.</li>
+<li>Les attributs sont séparés par des virgules.</li>
+<li>Le premier attribut est par défaut l'identifiant de l'entité.</li>
+</ul>
+
+<h2>Définir une association</h2>
+
+<pre><code>nom association, 01 nom entité 1, 1N nom entité 2, ... : attribut 1, attribut 2, ...
+</code></pre>
+
+<ul>
+<li>Un nom d'association est séparé de sa première patte par une virgule.</li>
+<li>Les pattes d'une association sont séparées par des virgules.</li>
+<li>Une patte consiste en un couple de cardinalités (<code>01</code>, <code>11</code>, <code>0N</code>, <code>1N</code>) suivi du nom d'une entité.</li>
+<li>La dernière patte d'une association est séparée de ses éventuels attributs par un deux-points.</li>
+<li>Les attributs sont séparés par des virgules.</li>
+<li>Deux pattes d'une même association peuvent aboutir à une même entité (association réflexive).</li>
+</ul>
+
+<h2>Spécifier une mise en page</h2>
+
+<ul>
+<li>Les boîtes définies sur des lignes <em>consécutives</em> sont tracées sur une même rangée.</li>
+<li>Un saut de ligne commence une nouvelle rangée.</li>
+<li>Toutes les boîtes d'une même colonne sont alignées verticalement.</li>
+<li>Une ligne réduite à un deux-points insère une boîte invisible.</li>
+</ul>
+
+<h1>Principales opérations</h1>
+
+<h2>Réarranger les boîtes</h2>
+
+<ul>
+<li><i class="fa fa-arrows-v"></i> [<em>resp.</em>, <i class="fa fa-arrows-h"></i> et&nbsp; <i class="fa fa-arrows-v fa-rotate-45"></i>&nbsp;]&nbsp;: inverse le MCD verticalement [<em>resp.</em>, horizontalement et par transposition].</li>
+<li><i class="fa fa-random"></i>&nbsp;: recherche une mise en page sans croisement et minimisant la longueur des liens sur la plus petite grille «&nbsp;équilibrée&nbsp;» possible.</li>
+	<ul>
+		<li>Avec <kbd>SHIFT</kbd>&nbsp;: recherche contrainte par les dimensions de la grille courante.</li>
+		<li>Avec <kbd>ALT</kbd>&nbsp;: recherche non contrainte.</li>
+	</ul>
+</ul>
+
+<h2>Manipuler les schémas</h2>
+
+<ul>
+<li><i class="fa fa-refresh"></i>&nbsp;: dessine le MCD et génère le MLD à partir du texte d'entrée.</li>
+<li>Onglet «&nbsp;Retouches&nbsp;»&nbsp;: permet de modifier la position de certains éléments.</li>
+<li><i class="fa fa-download"></i>&nbsp;: récupère une archive de votre travail (entrée et sortie).</li>
+</ul>
+				</div>
+				<div id="inputContents" class="contents">
+					<div id="inputPane">
+						<div><input type="text" onchange="markAsDirty();freezeTitle();reveal()" onfocus="onFocus(this)" name="title" id="title" value="Sans Titre" onblur="onBlur(this)" autocomplete="off" title="Si vous ne donnez pas de titre à votre MCD, Mocodo essaiera d&#39;en trouver un pour vous."></div>
+						<span id="gear" class="fa fa-cog fa-2x"></span>
+						<div><textarea onchange="markAsDirty()" name="text" id="text" wrap="off" class=""></textarea></div>
+					</div>
+				</div>
+				<div id="paramContents" class="contents" style="display: none;">
+					<div><label class="fixedWidth" for="colors">Palette de couleurs</label><select onchange="markAsDirty();writeCookie()" name="colors" id="colors"><option>blank</option><option>bw</option><option>desert</option><option>keepsake</option><option>mondrian</option><option>ocean</option><option>pond</option><option>wb</option><option>xinnian</option><option>brewer+1</option><option>brewer-1</option><option>brewer+2</option><option>brewer-2</option><option>brewer+3</option><option>brewer-3</option><option>brewer+4</option><option>brewer-4</option><option>brewer+5</option><option>brewer-5</option><option>brewer+6</option><option>brewer-6</option><option>brewer+7</option><option>brewer-7</option><option>brewer+8</option><option>brewer-8</option><option selected="selected">brewer+9</option><option>brewer-9</option></select></div>
+					<div><label class="fixedWidth" for="shapes">Police et proportions</label><select onchange="markAsDirty();writeCookie()" name="shapes" id="shapes"><option>arial</option><option>copperplate</option><option>georgia</option><option>mondrian</option><option>sans</option><option>serif</option><option>times</option><option>trebuchet</option><option selected="selected">verdana</option><option>xinnian</option></select></div>
+					<div><label class="fixedWidth" for="flex">Inflexion des pattes trop rapprochées</label><select onchange="writeCookie()" name="flex" id="flex"><option>désactivée</option><option>peu perceptible</option><option>faible</option><option selected="selected">normale</option><option>forte</option><option>très prononcée</option></select></div>
+					<div><label class="fixedWidth" for="delays">Temps de calcul limité à </label><select onchange="writeCookie()" name="delays" id="delays"><option>15 secondes</option><option>30 secondes</option><option selected="selected">1 minute</option><option>2 minutes</option><option>4 minutes</option><option>8 minutes</option></select></div>
+					<div><label class="fixedWidth" for="disambiguation">Désambiguïsation des attributs migrants </label><select onchange="writeCookie()" name="disambiguation" id="disambiguation"><option selected="selected">annotations et numéros</option><option>numéros seulement</option></select></div>
+					<div><label class="fixedWidth" for="SQL_dialect" title="Pour générer un code SQL valide, faites suivre chaque attribut de son type entre crochets.">Dialecte SQL en sortie</label><select onchange="writeCookie()" name="SQL_dialect" id="SQL_dialect"><option selected="selected"></option><option>MySQL</option><option>Oracle</option><option>PostgreSQL</option><option>SQLite</option></select></div>
+					<div><label class="fixedWidth" for="relation_formats" title="Les formats cochés seront affichés sous l&#39;onglet Relations et inclus dans l&#39;archive téléchargée.">Format des relations en sortie</label> <ul name="relation_formats" id="relation_formats"><li><input type="checkbox" name="relations[]&#39;" value="diagram" onchange="markAsDirty();writeCookie()"> <label title="Résultat à réinjecter sous l&#39;onglet Entrée pour tracer un diagramme sagittal des relations.">Diagramme relationnel</label></li><li><input type="checkbox" name="relations[]&#39;" value="markdown_data_dict" onchange="markAsDirty();writeCookie()"> <label title="Option placée ici par commodité: un dictionnaire des données n&#39;a rien à voir avec un schéma relationnel.">Dictionnaire des données (Markdown)</label></li><li><input type="checkbox" name="relations[]&#39;" value="html_verbose" onchange="markAsDirty();writeCookie()"> <label title="S&#39;affiche également au-dessous du diagramme conceptuel.">Explications du schéma relationnel</label></li><li><input type="checkbox" name="relations[]&#39;" value="html" checked="checked" onchange="markAsDirty();writeCookie()"> <label title="S&#39;affiche également au-dessous du diagramme conceptuel.">HTML</label></li><li><input type="checkbox" name="relations[]&#39;" value="latex" onchange="markAsDirty();writeCookie()"> <label><span style="font-family: serif; font-style: normal; margin-right: -.7em;">L<span style="font-size: 0.9em; position: relative; top: -.1em; left: -0.4em;">A</span><span style="position: relative; left: -.5em;">T</span><span style="position: relative; top: .2em; left: -.6em;">E</span><span style="position: relative; left: -.7em;">X</span></span></label></li><li><input type="checkbox" name="relations[]&#39;" value="markdown" onchange="markAsDirty();writeCookie()"> <label>Markdown</label></li><li><input type="checkbox" name="relations[]&#39;" value="text" onchange="markAsDirty();writeCookie()"> <label>Texte brut</label></li></ul></div>
+				</div>
+				<div id="geoContents" class="contents" style="display: none;">
+					<fieldset><legend>Coordonnées du centre des boîtes</legend><div id="coords"><div><label>est sur</label> <input value="65" type="text" onfocus="markAsMoved()" name="cx0" id="cx0" min="0"> <input value="34" type="text" onfocus="markAsMoved()" name="cy0" id="cy0" min="0"> </div><div><label>PLATEFORME</label> <input value="179" type="text" onfocus="markAsMoved()" name="cx1" id="cx1" min="0"> <input value="34" type="text" onfocus="markAsMoved()" name="cy1" id="cy1" min="0"> </div><div><label>JEUX VIDEO</label> <input value="65" type="text" onfocus="markAsMoved()" name="cx2" id="cx2" min="0"> <input value="152" type="text" onfocus="markAsMoved()" name="cy2" id="cy2" min="0"> </div><div><label>est du</label> <input value="179" type="text" onfocus="markAsMoved()" name="cx3" id="cx3" min="0"> <input value="152" type="text" onfocus="markAsMoved()" name="cy3" id="cy3" min="0"> </div><div><label>GENRE</label> <input value="264" type="text" onfocus="markAsMoved()" name="cx4" id="cx4" min="0"> <input value="152" type="text" onfocus="markAsMoved()" name="cy4" id="cy4" min="0"> </div></div></fieldset>
+					<fieldset><legend>Décalage des cardinalités</legend><div id="cards"><div><label for="shift0">est sur,JEUX VIDEO</label> <input value="0" type="text" onfocus="markAsMoved()" name="shift0" id="shift0"></div><div><label for="shift1">est sur,PLATEFORME</label> <input value="0" type="text" onfocus="markAsMoved()" name="shift1" id="shift1"></div><div><label for="shift2">est du,JEUX VIDEO</label> <input value="0" type="text" onfocus="markAsMoved()" name="shift2" id="shift2"></div><div><label for="shift3">est du,GENRE</label> <input value="0" type="text" onfocus="markAsMoved()" name="shift3" id="shift3"></div></div></fieldset>
+					<fieldset><legend>Zone de rognage</legend><div id="size"><div><label>&nbsp;</label> <input value="300" type="text" onfocus="markAsMoved()" name="size_x" id="size_x" min="0"> <input value="229" type="text" onfocus="markAsMoved()" name="size_y" id="size_y" min="0"> </div></div></fieldset>
+					<fieldset><legend>Position des flèches des associations</legend><div id="arrows"></div></fieldset>
+				</div>
+			</div>
+		</div>
+		<div id="outputZone">
+			<div class="line"></div>
+			<ul class="tabs">
+				<li><a href="http://mocodo.wingi.net/#diagramAndSupplementOutput" id="diagramTab" class="first_tab active"><span>Diagramme</span></a></li>
+				<li><a href="http://mocodo.wingi.net/#relationalOutput"><span>Relations</span></a></li>
+				<li><a href="http://mocodo.wingi.net/#errorOutput" id="errorTab" class="" style="display: none;"><span>Erreurs</span></a></li>
+			</ul>
+			<div class="pane">
+				<div id="outputButtons" class="buttons">
+						<span class="fa fa-refresh fa-2x customButton" id="generateButton" onclick="generate()" title="Générer le MCD et les relations à partir du texte d&#39;entrée."></span>
+						<span class="fa fa-download fa-2x customButton" id="downloadButton" onclick="mainForm.submit()" title="Télécharger l&#39;ensemble des données et des résultats." style="display: inline;"></span>
+				</div>
+				<div id="diagramAndSupplementOutput" style="display: block;">
+					<div id="diagramOutput" class="contents active"><!--?xml version="1.0" standalone="no"?-->
+
+
+<svg width="300" height="229" view_box="0 0 300 229" xmlns="http://www.w3.org/2000/svg" xmlns:link="http://www.w3.org/1999/xlink">\n\n<desc>Généré par Mocodo 2.3.7 le Fri, 23 Jul 2021 02:07:34</desc>
+
+<rect id="frame" x="0" y="0" width="300" height="229" fill="#ffffbf" stroke="#808080" stroke-width="1" stroke-dasharray="2,2"></rect>
+
+<!-- Association est sur -->
+<line x1="65" y1="152" x2="65" y2="34" stroke="#f46d43" stroke-width="2"></line>
+<text x="70.0" y="76" fill="#3288bd" font-family="Verdana" font-size="12">1,N</text>
+<line x1="179" y1="34" x2="65" y2="34" stroke="#f46d43" stroke-width="2"></line>
+<text x="106" y="51.0" fill="#3288bd" font-family="Verdana" font-size="12">1,N</text>
+<g id="association-est sur">
+	<path d="M 79 9 a 14 14 90 0 1 14 14 V 34 h -56 V 23 a 14 14 90 0 1 14 -14" fill="#fdae61" stroke="#fdae61" stroke-width="0"></path>
+	<path d="M 93 34.0 v 11 a 14 14 90 0 1 -14 14 H 51 a 14 14 90 0 1 -14 -14 V 34.0 H 56" fill="#fee08b" stroke="#fee08b" stroke-width="0"></path>
+	<rect x="37" y="9" width="56" height="50" fill="none" rx="14" stroke="#f46d43" stroke-width="2"></rect>
+	<line x1="37" y1="34" x2="93" y2="34" stroke="#f46d43" stroke-width="1"></line>
+	<text x="44" y="26.7" fill="#000000" font-family="Verdana" font-size="12">est sur</text>
+</g>
+
+<!-- Association est du -->
+<line x1="65" y1="152" x2="179" y2="152" stroke="#f46d43" stroke-width="2"></line>
+<text x="126" y="169.0" fill="#3288bd" font-family="Verdana" font-size="12">1,N</text>
+<line x1="264" y1="152" x2="179" y2="152" stroke="#f46d43" stroke-width="2"></line>
+<text x="211" y="169.0" fill="#3288bd" font-family="Verdana" font-size="12">1,1</text>
+<g id="association-est du">
+	<path d="M 191 127 a 14 14 90 0 1 14 14 V 152 h -52 V 141 a 14 14 90 0 1 14 -14" fill="#fdae61" stroke="#fdae61" stroke-width="0"></path>
+	<path d="M 205 152.0 v 11 a 14 14 90 0 1 -14 14 H 167 a 14 14 90 0 1 -14 -14 V 152.0 H 52" fill="#fee08b" stroke="#fee08b" stroke-width="0"></path>
+	<rect x="153" y="127" width="52" height="50" fill="none" rx="14" stroke="#f46d43" stroke-width="2"></rect>
+	<line x1="153" y1="152" x2="205" y2="152" stroke="#f46d43" stroke-width="1"></line>
+	<text x="160" y="144.7" fill="#000000" font-family="Verdana" font-size="12">est du</text>
+</g>
+
+<!-- Entity GENRE -->
+<g id="entity-GENRE">
+	<g id="frame-GENRE">
+		<rect x="237" y="127" width="54" height="25" fill="#abdda4" stroke="#abdda4" stroke-width="0"></rect>
+		<rect x="237" y="152.0" width="54" height="25" fill="#e6f598" stroke="#e6f598" stroke-width="0"></rect>
+		<rect x="237" y="127" width="54" height="50" fill="none" stroke="#66c2a5" stroke-width="2"></rect>
+		<line x1="237" y1="152" x2="291" y2="152" stroke="#66c2a5" stroke-width="1"></line>
+	</g>
+	<text x="242" y="144.7" fill="#000000" font-family="Verdana" font-size="12">GENRE</text>
+	<text x="242" y="169.8" fill="#000000" font-family="Verdana" font-size="12">libellé</text>
+	<line x1="242" y1="172" x2="278" y2="172" stroke="#000000" stroke-width="1"></line>
+</g>
+
+<!-- Entity PLATEFORME -->
+<g id="entity-PLATEFORME">
+	<g id="frame-PLATEFORME">
+		<rect x="133" y="9" width="92" height="25" fill="#abdda4" stroke="#abdda4" stroke-width="0"></rect>
+		<rect x="133" y="34.0" width="92" height="25" fill="#e6f598" stroke="#e6f598" stroke-width="0"></rect>
+		<rect x="133" y="9" width="92" height="50" fill="none" stroke="#66c2a5" stroke-width="2"></rect>
+		<line x1="133" y1="34" x2="225" y2="34" stroke="#66c2a5" stroke-width="1"></line>
+	</g>
+	<text x="138" y="26.7" fill="#000000" font-family="Verdana" font-size="12">PLATEFORME</text>
+	<text x="138" y="51.8" fill="#000000" font-family="Verdana" font-size="12">libellé</text>
+	<line x1="138" y1="54" x2="174" y2="54" stroke="#000000" stroke-width="1"></line>
+</g>
+
+<!-- Entity JEUX VIDEO -->
+<g id="entity-JEUX VIDEO">
+	<g id="frame-JEUX VIDEO">
+		<rect x="9" y="84" width="112" height="25" fill="#abdda4" stroke="#abdda4" stroke-width="0"></rect>
+		<rect x="9" y="109.0" width="112" height="111" fill="#e6f598" stroke="#e6f598" stroke-width="0"></rect>
+		<rect x="9" y="84" width="112" height="136" fill="none" stroke="#66c2a5" stroke-width="2"></rect>
+		<line x1="9" y1="109" x2="121" y2="109" stroke="#66c2a5" stroke-width="1"></line>
+	</g>
+	<text x="27" y="101.7" fill="#000000" font-family="Verdana" font-size="12">JEUX VIDEO</text>
+	<text x="14" y="126.7" fill="#000000" font-family="Verdana" font-size="12">titre</text>
+	<line x1="14" y1="129" x2="40" y2="129" stroke="#000000" stroke-width="1"></line>
+	<text x="14" y="143.7" fill="#000000" font-family="Verdana" font-size="12">date de parution</text>
+	<text x="14" y="160.8" fill="#000000" font-family="Verdana" font-size="12">image</text>
+	<text x="14" y="177.8" fill="#000000" font-family="Verdana" font-size="12">description</text>
+	<text x="14" y="194.8" fill="#000000" font-family="Verdana" font-size="12">date de sortie</text>
+	<text x="14" y="211.8" fill="#000000" font-family="Verdana" font-size="12">note</text>
+</g>
+</svg></div>
+					<div id="diagramOutputSupplement" class="contents">
+
+
+<style>
+  #mld .relation { font-variant: small-caps; font-weight: bold }
+  #mld .primary { text-decoration: underline }
+  #mld .foreign { font-style: oblique }
+  #mld .normal { }
+</style>
+
+
+<div id="mld">
+<div>
+  <span class="relation">est sur</span> (
+    <span class="foreign primary">titre</span>,
+    <span class="foreign primary">libellé</span>
+  )
+</div>
+<!--
+<div>
+  <span class='relation'>PLATEFORME</span> (
+    <span class='primary'>libellé</span>
+  )
+</div>
+-->
+<div>
+  <span class="relation">JEUX VIDEO</span> (
+    <span class="primary">titre</span>,
+    <span class="normal">date de parution</span>,
+    <span class="normal">image</span>,
+    <span class="normal">description</span>,
+    <span class="normal">date de sortie</span>,
+    <span class="normal">note</span>
+  )
+</div>
+<div>
+  <span class="relation">GENRE</span> (
+    <span class="primary">libellé</span>,
+    <span class="foreign">titre</span>
+  )
+</div>
+</div>
+
+</div>
+				</div>
+				<div id="relationalOutput" class="contents" style="display: none;"><fieldset class="listing"><legend>HTML</legend><pre><code class="language-markup">&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset='utf-8'&gt;
+&lt;style&gt;
+  #mld .relation { font-variant: small-caps; font-weight: bold }
+  #mld .primary { text-decoration: underline }
+  #mld .foreign { font-style: oblique }
+  #mld .normal { }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id='mld'&gt;
+&lt;div&gt;
+  &lt;span class='relation'&gt;est sur&lt;/span&gt; (
+    &lt;span class='foreign primary'&gt;titre&lt;/span&gt;,
+    &lt;span class='foreign primary'&gt;libellé&lt;/span&gt;
+  )
+&lt;/div&gt;
+&lt;!--
+&lt;div&gt;
+  &lt;span class='relation'&gt;PLATEFORME&lt;/span&gt; (
+    &lt;span class='primary'&gt;libellé&lt;/span&gt;
+  )
+&lt;/div&gt;
+--&gt;
+&lt;div&gt;
+  &lt;span class='relation'&gt;JEUX VIDEO&lt;/span&gt; (
+    &lt;span class='primary'&gt;titre&lt;/span&gt;,
+    &lt;span class='normal'&gt;date de parution&lt;/span&gt;,
+    &lt;span class='normal'&gt;image&lt;/span&gt;,
+    &lt;span class='normal'&gt;description&lt;/span&gt;,
+    &lt;span class='normal'&gt;date de sortie&lt;/span&gt;,
+    &lt;span class='normal'&gt;note&lt;/span&gt;
+  )
+&lt;/div&gt;
+&lt;div&gt;
+  &lt;span class='relation'&gt;GENRE&lt;/span&gt; (
+    &lt;span class='primary'&gt;libellé&lt;/span&gt;,
+    &lt;span class='foreign'&gt;titre&lt;/span&gt;
+  )
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre></fieldset></div>
+				<div id="errorOutput" class="contents" style="display: none;"><pre>Mocodo Err.1 - Association «&nbsp;est sur&nbsp;» liée à une entité inconnue
+«&nbsp;JEUXVIDEO&nbsp;».</pre></div>
+			</div>
+		</div>
+	</form>
+</div>
+<div id="navigation">
+	<a target="_blank" href="https://github.com/laowantong/mocodo">Mocodo</a>
+	&nbsp;∙&nbsp;
+	<a target="_blank" href="https://rawgit.com/laowantong/mocodo/master/doc/fr_refman.html">Documentation</a>
+	&nbsp;∙&nbsp;
+	<a target="_blank" href="https://www.transifex.com/aristide/mocodo">Localisation</a>
+	&nbsp;∙&nbsp;
+	<a target="_blank" href="https://github.com/laowantong/mocodo/issues">Récriminations</a>
+	&nbsp;∙&nbsp;
+	<span id="contact"><a href="mailto:mocodo@wingi.net">Contact</a></span>
+</div>
+
+<script type="text/javascript" charset="utf8" src="./Mocodo online_files/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" charset="utf8" src="./Mocodo online_files/js.cookie.js"></script>
+<script type="text/javascript" charset="utf8" src="./Mocodo online_files/mocodo.js"></script>
+
+
+
+</body></html>
