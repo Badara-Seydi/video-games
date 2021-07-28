@@ -69,7 +69,6 @@ const mainController = {
         dataMapper.addVideoGame(newGame, callback);
     },
 
-
     deleteOneGame: (request, response) => {
         console.log('deletezer');
         const deleteGame = request.params.id;
@@ -79,16 +78,14 @@ const mainController = {
                 console.log(error);
                 response.status(500).send(error);
             } else {
-                console.log(result.rows)
-                response.send('jeu effacé !');
+                console.log(result.rows + 'route get');
+                response.send('sa a bien été supprimé');
             }
         }
         dataMapper.deleteVideoGame(deleteGame,callback)
-    }
+    },
 
 
 }
-
-
 
 module.exports = mainController

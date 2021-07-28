@@ -39,7 +39,7 @@ const dataMapper = {
             values : [id],
         }
         database.query(deleteGame);
-        callback(null,id)
+        callback(id)
     },
 
    
