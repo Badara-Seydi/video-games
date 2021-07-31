@@ -42,3 +42,48 @@ h1{
 p{
     color: white;
 }
+
+.form {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    text-align: center;
+    height: 40vh;
+    margin:auto;
+    margin-top: 17%;
+    border: solid 1px white;
+    background-color: white;
+    border-radius: 15%;
+}
+
+input{
+    width : 90%;
+    height: 40px;
+    margin: 3%;
+    box-sizing: border-box;
+    border-radius: 5%;
+    border:none
+}
+
+
+input::placeholder{
+    color : cornflowerblue ;
+}
+
+p{
+    color: black;
+    font-size: large;
+}
+button{
+    margin-top: 50px;
+    width: 150px;
+    height: 40px;
+    border-radius: 10%;
+    background-color: cornflowerblue;
+}
+button:hover{
+    background-color: red;
+    transition: 0.3s;
+    color: white;
+}
