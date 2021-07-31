@@ -1,5 +1,6 @@
 const database = require('./database');
-const mainController = require('../controllers/mainController')
+const mainController = require('../controllers/mainController');
+const { request } = require('http');
 
 const dataMapper = {
 
@@ -41,6 +42,20 @@ const dataMapper = {
         database.query(deleteGame);
         callback(id)
     },
+
+    loginUser : (data,callback) =>{
+        const addUser = {
+            text : 'INSERT INTO "user" ("email","password")'+
+            `VALUES ($1,$2)`,
+            values : [data.email,data.password],
+        }
+        console.log([data]);
+        database.query(addUser);
+        callback(
+            console.log("fin de loginUser") 
+        )
+       ;
+    }
 
    
 

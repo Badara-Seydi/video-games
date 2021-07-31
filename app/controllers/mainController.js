@@ -11,13 +11,10 @@ const mainController = {
                 response.send('sa marche pas conio')
             } else {
 
-                console.log(result.rows)
                 response.render('index', {
                     jeuxvideo: result.rows
                 })
             }
-
-
         };
         dataMapper.getAllJeuxVideo(test);
     },
@@ -28,7 +25,6 @@ const mainController = {
             if (error) {
                 response.send('sa marche pas conio' + error)
             } else {
-                console.log(result)
                 response.render('oneGame', {
 
                     jeu: result.rows[0]
@@ -37,8 +33,8 @@ const mainController = {
             }
 
         }
-        dataMapper.getOneJeuVideo((request.params.id), test);
-    },
+        dataMapper.getOneJeuVideo(request.params.id, test);
+   },
 
     addGameView: (request, response) => {
         console.log('addGameView is here');
@@ -65,7 +61,7 @@ const mainController = {
                 prompt('Nouveau jeu ajouté');
             }
         };
-        console.log('JE PASSE APRES LE CALLBACK')
+        console.log('JE PASSE APRES LE CALLBACK');
         dataMapper.addVideoGame(newGame, callback);
     },
 
