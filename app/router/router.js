@@ -9,8 +9,10 @@ const adminController = require('../controllers/adminController')
 
 
 router.get('/', mainController.homePage);
-router.get('/login/create' , adminController.loginView);
-router.post('/login/create' , adminController.login);
+router.get('/signin' , adminController.signInView);
+router.post('/signin' , adminController.signIn);
+router.get('/login',adminController.justLog);
+router.post('/login',adminController.justLogIn);
 router.get('/new' , mainController.addGameView);
 router.post('/new' , mainController.addGame);
 router.get('/delete/:id' , mainController.deleteOneGame);

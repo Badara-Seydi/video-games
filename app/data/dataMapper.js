@@ -29,7 +29,7 @@ const dataMapper = {
         }
         console.log(data)
         database.query(addNewGame);
-        callback(null) //Tester la route add sans le callback(null) l'enlever aussi dans addVideoGame
+        callback(null);
         console.log('callback de addVideoGame fini')
 
     },
@@ -43,7 +43,7 @@ const dataMapper = {
         callback(id)
     },
 
-    loginUser : (data,callback) =>{
+    signInUser : (data,callback) =>{
         const addUser = {
             text : 'INSERT INTO "user" ("email","password")'+
             `VALUES ($1,$2)`,
@@ -55,6 +55,19 @@ const dataMapper = {
             console.log("fin de loginUser") 
         )
        ;
+    },
+
+    logInUser : (input,callback)=>{
+        const logIn = {
+            text: `SELECT * FROM "user" WHERE 'email' ILIKE $1;`,
+            values: [`%${input}%`]
+        }
+        // console.log(datas);
+        database.query(logIn,callback);
+        callback(
+            console.log("fin de logInUser", logIn)
+        )
+
     }
 
    

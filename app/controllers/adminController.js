@@ -5,15 +5,15 @@ const dataMapper = require('../data/dataMapper')
 
 const adminController = {
 
-    loginView: (request, response) => {
-        console.log('loginView is here');
-        response.render('login');
+    signInView: (request, response) => {
+        console.log('signInView is here');
+        response.render('signin');
 
     },
 
-    login: (req, res) => {
+    signIn: (req, res) => {
 
-        console.log('dans le login ')
+        console.log('dans le signIn ')
         const data = req.body;
         console.log(data);
         const callback = (error, result) => {
@@ -25,11 +25,31 @@ const adminController = {
             }
             console.log('login')
         };
-        dataMapper.loginUser(data, callback);
+        dataMapper.signInUser(data, callback);
 
-    }
+    },
 
+    justLog: (req,res)=>{
+        res.render('login')
+    },
 
-};
+    justLogIn : (req, res) => {
+        console.log('dans le justLog');
+        const input = req.body;
+        // const user = dataMapper.logInUser;
+        const callback = (error, result) => {
+            if(error){
+                console.log(error),
+                res.status(500).send(error)
+            }else {
+                console.log(input),
+                console.log('email correspondant trouvé '),
+                res.render('login')
+            }
+        };dataMapper.logInUser(input , callback)
+
+        },
+        
+    };
 
 module.exports = adminController;

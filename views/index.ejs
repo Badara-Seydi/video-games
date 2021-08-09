@@ -1,6 +1,12 @@
 <%- include ('partials/header') %>
+<div class="onglet"> <button class="log"><a href="/Signin">Se Connecter / S'inscrire</a></button>    <button class="log"><a href="/new">Ajouter un jeu</a> </button></div> 
 
-<h1> LISTE DES JEUX VIDEOS </h1>
+
+<h3>Consoles</h3>
+
+<h1> LE MUST-HAVE DU JEUX VIDEOS </h1>
+
+
 
 
 <div class="allgame">
@@ -9,12 +15,13 @@
 <div class="game">
  <a href="/<%=jeu.id%>">
   <img src="img/<%=jeu.image%>.jpg">
+  <section class="oneGame">
   <p class="titre"><%= jeu.titre %></p></a>
   <p>Disponible sur : <%=jeu.plateforme%></p>
   <p class="description"><%= jeu.description%></p>
   <p class="date">Date de sortie :  <%= jeu.date_de_sortie%> </p>
   <p>Note moyenne des joueurs :<%=jeu.note%>/10</p>
-
+</section>
 </div>
 
 <% }%>

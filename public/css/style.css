@@ -1,17 +1,33 @@
 body{
     background-color: cornflowerblue;
+    font-family: 'Roboto Slab', serif;
 }
 
 .game{
-    border: solid 4px darkblue;
-    width: 25%;
+    border: solid 4px white;
+    width: 23%;
     justify-content: center;
     text-align: center;
     padding: 2%;
     margin-bottom: 3%;
-    background-color: darkcyan;
+    background-color: white;
     border-radius: 5%;
    
+}
+.onglet{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    border: solid 1px white;
+    background-image: url('https://technabob.com/blog/wp-content/uploads/2015/07/gaming-wall-6.jpg');
+    color: white;
+    position: relative;
+    width: 100%;
+    margin-top: 0%;
+}
+button.log {
+margin-left: 75%;
+color: white;
 }
 
 .note{
@@ -30,14 +46,14 @@ img{
 h1{
     text-align: center;
     margin :5%;
-    color: blue;
+    color: white
 }
 
 .allgame{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 p{
     color: white;
@@ -86,4 +102,13 @@ button:hover{
     background-color: red;
     transition: 0.3s;
     color: white;
+}
+
+.oneGame{
+    color: white;
+}
+.oneGame:hover{
+    background-color: white;
+    transition: 0.3s;
+    
 }
